@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RamazanKaratayOdev1.KrediHesaplama"
+             Title="Kredi Hesaplayıcı">
+    <VerticalStackLayout Padding="60">
+        <Picker 
+            x:Name="pickerKrediTipi" 
+            Title="Kredi Tipi"
+            SelectedIndex="0"
+            HorizontalOptions="Center"
+            BackgroundColor="DimGray">
+            <Picker.Items>
+                <x:String>İhtiyaç</x:String>
+                <x:String>Konut</x:String>
+                <x:String>Taşıt</x:String>
+                <x:String>Ticari</x:String>
+            </Picker.Items>
+
+        </Picker>
+
+        <Label            
+            Text="Kredi Tutarı (TL)" />
+        <Entry Placeholder="Kredi Tutarını Giriniz"
+               Keyboard="Numeric"
+               x:Name="KrediTutariTxt"/>
+
+        <Label 
+               Text="Faiz Oranı (%)" />
+        <Entry x:Name="FaizOraniTxt" 
+               Placeholder="Faiz Oranı Giriniz" 
+               Keyboard="Numeric" />
+
+        <Label 
+               Text="Vade (Ay)" />
+        <Entry x:Name="VadeTxt" 
+               Placeholder="Geri Ödeme Süresi Giriniz" 
+               Keyboard="Numeric" />
+
+        <Button Text="Hesapla" Clicked="KrediHesapla" BackgroundColor="Green"/>
+
+        <Label x:Name="lblAylikOdeme" Text="Aylık Ödeme:" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
+        <Label x:Name="lblToplamFaiz" Text="Toplam Faiz:" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
+        <Label x:Name="lblToplam" Text="Toplam Borç:" HorizontalTextAlignment="Center" VerticalTextAlignment="Center" />
+
+    </VerticalStackLayout>
+</ContentPage>

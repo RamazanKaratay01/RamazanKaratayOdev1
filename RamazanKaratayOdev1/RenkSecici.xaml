@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RamazanKaratayOdev1.RenkSecici"
+             Title="Renk Seçici">
+    <VerticalStackLayout Padding="80">
+        <Label Text="Kırmızı renk" TextColor="Red" />
+        <Slider x:Name="Red" Minimum="0" Maximum="255" Value="0" ValueChanged="Red_ValueChanged" ThumbColor="Red" MinimumTrackColor="Red"/>
+
+        <Label Text="Yeşil renk" TextColor="Green"/>
+        <Slider x:Name="Green" Minimum="0" Maximum="255" Value="0" ValueChanged="Green_ValueChanged" ThumbColor="Green" MinimumTrackColor="Green"/>
+
+        <Label Text="Mavi renk" TextColor="Blue"/>
+        <Slider x:Name="Blue" Minimum="0" Maximum="255" Value="0" ValueChanged="Blue_ValueChanged" ThumbColor="Blue" MinimumTrackColor="Blue"/>
+
+        <BoxView x:Name="BoxView" WidthRequest="200" HeightRequest="200" HorizontalOptions="Center" VerticalOptions="Center"/>
+
+        <Border></Border>
+        
+        <Border>
+            <HorizontalStackLayout HorizontalOptions="Center" HeightRequest="80">
+                <Label x:Name="hex"  Text="#0000000" FontSize="Medium"/>
+                <ImageButton Source="copy_color.png" Clicked="CopyClicked"/>
+            </HorizontalStackLayout>
+        </Border>
+
+        <Button Text="Random" Clicked="RandomColor"/>
+
+    </VerticalStackLayout>
+</ContentPage>

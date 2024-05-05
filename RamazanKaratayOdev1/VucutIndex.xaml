@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="RamazanKaratayOdev1.VucutIndex"
+             Title="Vücut Kitle İndeksi">
+    <VerticalStackLayout Padding="20" HorizontalOptions="Center">
+        <HorizontalStackLayout HorizontalOptions="Center">
+            <Label Text="Kilonuz (KG): "/>
+            <Entry Placeholder="Kilonuz... "
+                   Keyboard="Numeric"
+                   x:Name="kilo"
+                   WidthRequest="100"/>
+        </HorizontalStackLayout>
+
+        <HorizontalStackLayout HorizontalOptions="Center">
+            <Label Text="Boyunuz (cm): "/>
+            <Entry Placeholder="Boyunuz... "
+                   Keyboard="Numeric"
+                   x:Name="boy"
+                   WidthRequest="100"/>
+        </HorizontalStackLayout>
+
+        <Button Text="Hesapla" Clicked="Index" BackgroundColor="LightGreen" TextColor="Black"/>
+        <Label x:Name="SonucLabel" TextColor="Black"/>
+
+    </VerticalStackLayout>
+</ContentPage>
